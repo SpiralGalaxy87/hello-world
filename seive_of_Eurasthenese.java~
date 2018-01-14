@@ -1,0 +1,55 @@
+/*
+* Lesson 25 - Unit 3 - Algorithms 
+*/
+import java.io.*;
+import static java.lang.System.*;
+
+import java.util.Scanner;
+import java.lang.Math;
+
+
+class seive_of_Eurasthanese{
+  
+     public static void main (String str[]) throws IOException {
+
+          Scanner scan = new Scanner(System.in);
+          int searchIn = scan.nextInt();
+          boolean prime[] = new boolean [searchIn];
+          
+          //initialize to true
+          for (int j = 0; j < prime.length; j++)
+          {
+               prime[j] = true;
+          }
+          //processing...   processing...
+          
+          for(int k = 2; k < prime.length; k++){
+           
+            if(prime[k]){
+              for(int l = k+1; l < prime.length; l++)
+              {
+                if( l % k == 0 ){
+                  prime[l] = false;
+                }
+              }
+              
+            }
+            
+            
+          }
+          
+          
+          //output
+          int numOfPrimes = 0;
+          for( int i = 2; i < prime.length; i++)
+          {
+            if(prime[i])
+            {
+              numOfPrimes ++;
+              System.out.print(i + " ");
+            }
+          }
+          System.out.println("\nThe number of primes up to " + searchIn + " is: " + numOfPrimes);
+     }
+
+}
