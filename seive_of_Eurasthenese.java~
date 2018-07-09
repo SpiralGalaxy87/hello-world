@@ -6,7 +6,9 @@ import java.io.*;
 import static java.lang.System.*;
 
 import java.util.Scanner;
-import java.lang.Math;
+import java.lang.Math; 
+
+//sdfhasodfjasodfals,vmnloaisifopsa'd
 
 
 class seive_of_Eurasthanese{
